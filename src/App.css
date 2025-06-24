@@ -1,0 +1,279 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* My Peeps custom styles */
+.container {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px #0001;
+  padding: 2rem 1.5rem 3rem 1.5rem;
+  position: relative;
+}
+
+.person-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 2.5rem 0;
+}
+.person-item {
+  background: #f6f8fa;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 1px 4px #0001;
+}
+.person-notes {
+  color: #555;
+  margin-top: 0.5em;
+  font-size: 0.97em;
+}
+
+.add-btn {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  background: #646cff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #646cff44;
+  transition: background 0.2s;
+}
+.add-btn:hover {
+  background: #4b52c7;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #0006;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 32px #0002;
+  min-width: 300px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.modal input, .modal textarea {
+  width: 100%;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+.modal-actions {
+  display: flex;
+  gap: 1em;
+  justify-content: flex-end;
+}
+.modal-actions button {
+  padding: 0.5em 1.2em;
+  border-radius: 5px;
+  border: none;
+  background: #646cff;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.modal-actions button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+.modal-actions button:last-child {
+  background: #eee;
+  color: #333;
+}
+.modal-actions button:last-child:hover {
+  background: #ddd;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 350px;
+  margin: 2em auto 0 auto;
+  background: #f6f8fa;
+  padding: 2em 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #0001;
+}
+.auth-form input {
+  font-size: 1em;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.auth-form button[type="submit"] {
+  background: #646cff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7em 1.5em;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+.auth-form button[type="submit"]:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+.switch-auth {
+  margin-top: 0.5em;
+  font-size: 0.97em;
+}
+.switch-auth button {
+  background: none;
+  color: #646cff;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 1em;
+  padding: 0;
+}
+.error {
+  color: #c00;
+  background: #ffeaea;
+  border: 1px solid #fbb;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  margin-bottom: 0.5em;
+}
+.logout-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: #eee;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 1px 4px #0001;
+  transition: background 0.2s;
+}
+.logout-btn:hover {
+  background: #ddd;
+}
+.delete-btn {
+  background: none;
+  border: none;
+  color: #c00;
+  font-size: 1.2em;
+  margin-left: 1em;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: color 0.2s;
+}
+.delete-btn:hover {
+  color: #900;
+}
+
+.tabs {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 2em;
+  justify-content: center;
+}
+.tabs button {
+  background: #eee;
+  color: #333;
+  border: none;
+  border-radius: 5px 5px 0 0;
+  padding: 0.7em 2em;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: background 0.2s, border-bottom 0.2s;
+}
+.tabs button.active {
+  background: #646cff;
+  color: #fff;
+  border-bottom: 2px solid #646cff;
+}
+
+.group-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 2.5rem 0;
+}
+.group-item {
+  background: #f6f8fa;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 1px 4px #0001;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.group-title {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.group-detail {
+  background: #f6f8fa;
+  margin-top: 2em;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0001;
+}
