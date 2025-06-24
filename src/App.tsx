@@ -11,12 +11,10 @@ import type { User } from 'firebase/auth'
 import {
   collection,
   addDoc,
-  getDocs,
   query,
   where,
   onSnapshot,
   doc,
-  setDoc,
   deleteDoc,
   orderBy,
   updateDoc,
@@ -40,7 +38,6 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [selectedGroup, setSelectedGroup] = useState<{ id: string; title: string; personIds: string[] }|null>(null);
-  const [newImageFile, setNewImageFile] = useState<File | null>(null);
   const [newImageUrl, setNewImageUrl] = useState('');
   const [uploadingImage, setUploadingImage] = useState(false);
   const [editModal, setEditModal] = useState<null | { id: string; name: string; notes: string; imageUrl?: string }>(null);
@@ -102,7 +99,6 @@ function App() {
     });
     setNewName('');
     setNewNotes('');
-    setNewImageFile(null);
     setNewImageUrl('');
     setShowModal(false);
   };
@@ -181,7 +177,6 @@ function App() {
   const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
-    setNewImageFile(file);
     setUploadingImage(true);
     const url = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/upload`;
     const formData = new FormData();
